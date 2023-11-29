@@ -14,6 +14,11 @@ console.log("callback.js file was loaded");
 // }
 // sum(15, 20, makeCurrency);
 
+console.log("1");
+setTimeout(() => {
+  console.log("2");
+}, 0);
+console.log("3");
 function getHeader(callBack) {
   setTimeout(() => {
     console.log("<Header/>");
