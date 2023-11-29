@@ -28,20 +28,24 @@ function printPosts() {
 }
 // printPosts();
 
-function CreatePost(newPostObj) {
+function createPost(newPostObj, cb) {
   setTimeout(() => {
     posts.push(newPostObj);
     console.log("created Post");
+    cb();
   }, 500);
 }
 
 function getPosts() {
   setTimeout(() => {
     printPosts();
-  }, 1500);
+  }, 400);
 }
 
 //app eiga
 const thirdPost = { title: "Post Three", body: "This is post Three body" };
-CreatePost(thirdPost);
-getPosts();
+// createPost(thirdPost);
+// getPosts();
+
+// callback sprendimas
+createPost(thirdPost, getPosts);
